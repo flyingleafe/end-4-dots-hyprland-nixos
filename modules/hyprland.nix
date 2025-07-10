@@ -84,6 +84,7 @@ in
     xdg.configFile."hypr/hyprland/execs.conf".source =      "${illogical-impulse-dotfiles}/.config/hypr/hyprland/execs.conf";
     xdg.configFile."hypr/hyprland/general.conf".source =    "${illogical-impulse-dotfiles}/.config/hypr/hyprland/general.conf";
     xdg.configFile."hypr/hyprland/rules.conf".source =      "${illogical-impulse-dotfiles}/.config/hypr/hyprland/rules.conf";
+    xdg.configFile."hypr/hyprland/colors.conf".source =     "${illogical-impulse-dotfiles}/.config/hypr/hyprland/colors.conf";
     xdg.configFile."hypr/hyprland/keybinds.conf".source =   "${illogical-impulse-dotfiles}/.config/hypr/hyprland/keybinds.conf";
 
     xdg.configFile."hypr/hyprlock".source =                 "${illogical-impulse-dotfiles}/.config/hypr/hyprlock";
