@@ -23,7 +23,6 @@ in
       kdePackages.qt5compat
       kdePackages.qtbase
       kdePackages.qtdeclarative
-      kdePackages.qtdeclarative
       kdePackages.qtimageformats
       kdePackages.qtmultimedia
       kdePackages.qtpositioning
@@ -33,8 +32,8 @@ in
       kdePackages.qttools
       kdePackages.qttranslations
       kdePackages.qtvirtualkeyboard
-      kdePackages.qtwayland
-      kdePackages.syntax-highlighting
+      kdePackages.qtwayland 
+      kdePackages.syntax-highlighting 
     ];
 
     xdg.configFile."quickshell".source = "${illogical-impulse-dotfiles}/.config/quickshell";

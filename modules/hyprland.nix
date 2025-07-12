@@ -34,23 +34,28 @@ in
         debug.disable_logs = false;
 
         monitor = hyprlandConf.monitor;
-      };
+      } // import ./hyprland/execs.nix
+        // import ./hyprland/general.nix
+        // import ./hyprland/rules.nix
+        // import ./hyprland/colors.nix;
 
-      extraConfig = ''
-        # Defaults
-        source=~/.config/hypr/hyprland/execs.conf
-        source=~/.config/hypr/hyprland/general.conf
-        source=~/.config/hypr/hyprland/rules.conf
-        source=~/.config/hypr/hyprland/colors.conf
-        source=~/.config/hypr/hyprland/keybinds.conf
+      extraConfig = builtins.readFile ./hyprland/extra.conf;
 
-        # Custom 
-        source=~/.config/hypr/custom/env.conf
-        source=~/.config/hypr/custom/execs.conf
-        source=~/.config/hypr/custom/general.conf
-        source=~/.config/hypr/custom/rules.conf
-        source=~/.config/hypr/custom/keybinds.conf
-      '';
+      # extraConfig = ''
+      #   # Defaults
+      #   # source=${config.xdg.configHome}/hypr/hyprland/execs.conf
+      #   # source=${config.xdg.configHome}/hypr/hyprland/general.conf
+      #   # source=${config.xdg.configHome}/hypr/hyprland/rules.conf
+      #   # source=${config.xdg.configHome}/hypr/hyprland/colors.conf
+      #   # source=${config.xdg.configHome}/hypr/hyprland/keybinds.conf
+
+      #   # Custom 
+      #   # source=~/.config/hypr/custom/env.conf
+      #   # source=~/.config/hypr/custom/execs.conf
+      #   # source=~/.config/hypr/custom/general.conf
+      #   # source=~/.config/hypr/custom/rules.conf
+      #   # source=~/.config/hypr/custom/keybinds.conf
+      # '';
 
     };
 
@@ -81,15 +86,15 @@ in
     };
 
     xdg.configFile."hypr/hyprland/scripts".source =         "${illogical-impulse-dotfiles}/.config/hypr/hyprland/scripts";
-    xdg.configFile."hypr/hyprland/execs.conf".source =      "${illogical-impulse-dotfiles}/.config/hypr/hyprland/execs.conf";
-    xdg.configFile."hypr/hyprland/general.conf".source =    "${illogical-impulse-dotfiles}/.config/hypr/hyprland/general.conf";
-    xdg.configFile."hypr/hyprland/rules.conf".source =      "${illogical-impulse-dotfiles}/.config/hypr/hyprland/rules.conf";
-    xdg.configFile."hypr/hyprland/colors.conf".source =     "${illogical-impulse-dotfiles}/.config/hypr/hyprland/colors.conf";
-    xdg.configFile."hypr/hyprland/keybinds.conf".source =   "${illogical-impulse-dotfiles}/.config/hypr/hyprland/keybinds.conf";
+    # xdg.configFile."hypr/hyprland/execs.conf".source =      "${illogical-impulse-dotfiles}/.config/hypr/hyprland/execs.conf";
+    # xdg.configFile."hypr/hyprland/general.conf".source =    "${illogical-impulse-dotfiles}/.config/hypr/hyprland/general.conf";
+    # xdg.configFile."hypr/hyprland/rules.conf".source =      "${illogical-impulse-dotfiles}/.config/hypr/hyprland/rules.conf";
+    # xdg.configFile."hypr/hyprland/colors.conf".source =     "${illogical-impulse-dotfiles}/.config/hypr/hyprland/colors.conf";
+    # xdg.configFile."hypr/hyprland/keybinds.conf".source =   "${illogical-impulse-dotfiles}/.config/hypr/hyprland/keybinds.conf";
 
     xdg.configFile."hypr/hyprlock".source =                 "${illogical-impulse-dotfiles}/.config/hypr/hyprlock";
     xdg.configFile."hypr/shaders".source =                  "${illogical-impulse-dotfiles}/.config/hypr/shaders";
-    xdg.configFile."hypr/custom".source =                   "${illogical-impulse-dotfiles}/.config/hypr/custom";
+    # xdg.configFile."hypr/custom".source =                   "${illogical-impulse-dotfiles}/.config/hypr/custom";
 
   };
 }
