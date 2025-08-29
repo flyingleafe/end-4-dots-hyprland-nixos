@@ -11,6 +11,7 @@ in
     home.packages = with pkgs; [
       hyprpicker
       hyprlock
+      hypridle
     ];
 
     wayland.windowManager.hyprland = {
